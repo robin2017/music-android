@@ -30,13 +30,19 @@ public class WelcomeActivity extends AppCompatActivity {
             public void run() {
                 //在Logcat中可以查看日志，登记error
                 Log.e("跳转到主页面", String.valueOf(3));
-                toMain();
+                toLogon();
             }
-        }, 3000);
+        }, 500);
     }
 
     private void toMain() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void toLogon() {
+        Intent intent = new Intent(this, LogonActivity.class);
         startActivity(intent);
         finish();
     }
