@@ -3,5 +3,5 @@
     <dimen name="marginSize">16dp</dimen>
     <dimen name="navBarHeight">56dp</dimen>
     <dimen name="navBarTitleSize">22sp</dimen>
-    <dimen name="imageHeight">40dp</dimen>
+    <dimen name="imageWidth">32dp</dimen>
 </resources>

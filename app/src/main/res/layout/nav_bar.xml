@@ -7,21 +7,24 @@
     android:paddingRight="@dimen/marginSize">
 
     <ImageView
-        android:layout_width="@dimen/imageHeight"
+        android:id="@+id/iv_left"
+        android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:src="@mipmap/back"></ImageView>
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="慕课音乐"
+        android:text="标题文字"
         android:textColor="@color/white"
         android:textSize="@dimen/navBarTitleSize"></TextView>
 
     <ImageView
-        android:layout_width="@dimen/imageHeight"
+        android:id="@+id/iv_right"
+        android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center_vertical"
         android:src="@mipmap/user"></ImageView>
