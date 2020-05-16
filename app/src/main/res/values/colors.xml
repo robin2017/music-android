@@ -7,4 +7,5 @@
     <color name="mainColor">#d43433</color>
     <color name="black">#333333</color>
     <color name="white">#eeeeee</color>
+    <color name="lineColor">#c3c3c3</color>
 </resources>
