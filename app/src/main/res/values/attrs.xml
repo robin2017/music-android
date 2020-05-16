@@ -7,3 +7,4 @@
         <attr name="is_password" format="boolean"></attr>
     </declare-styleable>
 </resources>
+

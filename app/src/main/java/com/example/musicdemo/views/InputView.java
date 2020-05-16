@@ -27,7 +27,6 @@ public class InputView extends FrameLayout {
     private String inputHint;
     private Boolean isPassword;
 
-
     private View mView;
     private ImageView mIcon;
     private EditText mText;
@@ -63,21 +62,19 @@ public class InputView extends FrameLayout {
         isPassword = typedArray.getBoolean(R.styleable.inputValue_is_password, false);
 
         typedArray.recycle();//释放
-
-
         mView = LayoutInflater.from(context).inflate(R.layout.input_view, this, false);
         mIcon = mView.findViewById(R.id.iv_icon);
         mText = mView.findViewById(R.id.ev_text);
-
         //布局关联属性
         mIcon.setImageResource(inputIcon);
         mText.setHint(inputHint);
-        mText.setInputType(isPassword ? InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD : InputType.TYPE_CLASS_PHONE);
+        mText.setInputType(isPassword ? InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD
+                : InputType.TYPE_CLASS_PHONE);
         addView(mView);
     }
 
     //返回输入内容
-    public String getInputStr(){
+    public String getInputStr() {
         return mText.getText().toString().trim();
     }
 }
