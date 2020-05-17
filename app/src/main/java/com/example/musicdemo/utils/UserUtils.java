@@ -21,4 +21,24 @@ public class UserUtils {
         }
         return true;
     }
+
+    /**
+     * 验证注册用户输入合法性
+     */
+    public static boolean validateRegister(Context context, String phone, String password,String passwordConfirm) {
+        if (!RegexUtils.isMobileExact(phone)) {
+            Toast.makeText(context, "无效手机号", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(context, "请输入密码", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (!TextUtils.equals(password,passwordConfirm)) {
+            Toast.makeText(context, "两次密码输入不一致", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 }

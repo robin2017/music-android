@@ -1,46 +1,40 @@
 package com.example.musicdemo.activity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.musicdemo.R;
 import com.example.musicdemo.utils.UserUtils;
 import com.example.musicdemo.views.InputView;
 
-public class LogonActivity extends BaseActivity {
-    private InputView mPhone, mPassword;
-
+public class RegisterActivity extends BaseActivity {
+    private InputView mPhone, mPassword,mPasswordConfirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //此处报错，但项目可以正常运行
-        setContentView(R.layout.activity_logon);
+        setContentView(R.layout.activity_register);
         initView();
     }
-
     private void initView() {
-        initNavBar(false, "登录", false);
+        initNavBar(true, "注册", false);
         mPhone = findViewById(R.id.input_phone);
         mPassword = findViewById(R.id.input_password);
-
+        mPasswordConfirm = findViewById(R.id.input_password_confirm);
     }
 
     //注册点击
-    public void onRegisterNow(View v) {
-        Intent intent = new Intent(this,RegisterActivity.class);
-        startActivity(intent);
-    }
-
-    //登录点击
-    public void onCommitClick(View v) {
+    public void onRegisterClick(View v) {
+        Toast.makeText(v.getContext(), "确认注册", Toast.LENGTH_SHORT).show();
         String phone = mPhone.getInputStr();
         String password = mPassword.getInputStr();
-        if (UserUtils.validateLogin(this, phone, password)) {
-            Intent intent = new Intent(this,
-                    MainActivity.class);
+        String password2 = mPasswordConfirm.getInputStr();
+        if(UserUtils.validateRegister(v.getContext(),phone,password,password2)){
+            Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
             finish();
         }
+
     }
 }
