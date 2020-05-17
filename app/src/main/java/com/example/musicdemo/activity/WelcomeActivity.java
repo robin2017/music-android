@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.musicdemo.MainActivity;
 import com.example.musicdemo.R;
 
 import java.util.Timer;
