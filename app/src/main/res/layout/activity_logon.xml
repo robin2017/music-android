@@ -37,17 +37,28 @@
     <View style="@style/line"></View>
 
 
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:onClick="onRegisterClick"-->
+    <!--        android:text="立即注册"-->
+    <!--        android:textColor="@color/mainColor"-->
+    <!--        android:textSize="12sp" />-->
+    <!--    <Button style="@style/commitBnt"-->
+    <!--        android:layout_marginLeft="100dp"-->
+    <!--        android:text="登 录"></Button>-->
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:onClick="onRegisterClick"
-        android:text="立即注册"
-        android:textColor="@color/mainColor"
-        android:textSize="12sp" />
-    <Button style="@style/commitBnt"
-        android:layout_marginLeft="100dp"
-        android:text="登 录"></Button>
+        android:text="Hello" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Robin" />
+
+
 </LinearLayout>
