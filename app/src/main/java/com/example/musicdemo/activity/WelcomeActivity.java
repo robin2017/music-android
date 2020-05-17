@@ -31,7 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 Log.e("跳转到主页面", String.valueOf(3));
                 toLogon();
             }
-        }, 500);
+        }, 3000);
     }
 
     private void toMain() {

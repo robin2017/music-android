@@ -1,6 +1,7 @@
 package com.example.musicdemo.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import com.example.musicdemo.R;
 public class BaseActivity extends Activity {
     private ImageView ivLeft, ivRight;
     private TextView tvTitle;
+
 
     protected void initNavBar(boolean showLeft, String title, boolean showRight) {
 
@@ -26,6 +28,14 @@ public class BaseActivity extends Activity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+        //个人中心按钮
+        ivRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BaseActivity.this, MeActivity.class);
+                startActivity(intent);
             }
         });
     }
